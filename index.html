@@ -36,7 +36,7 @@
         a { color: inherit; }
 
         .site-shell {
-            width: min(68rem, calc(100vw - 2rem));
+            width: min(64rem, calc(100vw - 2rem));
             margin: 0 auto;
         }
 
@@ -54,44 +54,6 @@
             height: 1px;
             background: linear-gradient(90deg, rgba(72, 96, 54, 0.82), rgba(236, 106, 55, 0.55), rgba(217, 209, 199, 0.18));
             margin-bottom: 1.75rem;
-        }
-
-        .section-title {
-            font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", serif;
-            font-size: clamp(1.55rem, 3vw, 2.25rem);
-            color: hsl(var(--foreground));
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-sub {
-            color: hsl(var(--muted-stone));
-            font-size: 1rem;
-            line-height: 1.65;
-            max-width: 44rem;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background: hsl(var(--industrial-orange));
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 0.9rem 1.9rem;
-            border-radius: 0.75rem;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: background 0.18s, transform 0.14s, box-shadow 0.18s;
-            box-shadow: 0 4px 16px rgba(236, 106, 55, 0.22);
-        }
-
-        .cta-btn:hover, .cta-btn:focus-visible {
-            background: hsl(18 83% 63%);
-            transform: translateY(-1px);
-            box-shadow: 0 6px 22px rgba(236, 106, 55, 0.3);
-            outline: none;
         }
 
         /* ── Header ── */
@@ -129,59 +91,61 @@
             color: hsl(var(--muted-stone));
         }
 
-        .topnav a {
-            text-decoration: none;
-            transition: color 0.15s;
-        }
-
-        .topnav a:hover, .topnav a:focus-visible { color: hsl(var(--foreground)); }
+        .topnav a { text-decoration: none; transition: color 0.15s; }
+        .topnav a:hover { color: hsl(var(--foreground)); }
 
         /* ── Hero ── */
         .hero {
-            padding: 3.5rem 0 3rem;
+            padding: 3.5rem 0 2.5rem;
         }
 
         .hero-inner {
-            max-width: 54rem;
+            max-width: 50rem;
         }
 
         .hero h1 {
             font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", serif;
-            font-size: clamp(2.2rem, 5.5vw, 3.75rem);
+            font-size: clamp(2.1rem, 5vw, 3.4rem);
             color: hsl(var(--foreground));
             line-height: 1.1;
             margin-bottom: 1.1rem;
         }
 
-        .hero-sub {
-            font-size: clamp(1rem, 2.2vw, 1.15rem);
+        .hero-body {
+            font-size: 1.05rem;
             color: hsl(var(--muted-stone));
-            line-height: 1.7;
+            line-height: 1.72;
             max-width: 42rem;
-            margin-bottom: 2rem;
         }
 
-        .hero-sub strong {
+        .hero-body strong {
             color: hsl(var(--foreground));
             font-weight: 600;
         }
 
-        /* ── Problem Section ── */
-        .problem-section {
-            padding: 3rem 0 3.5rem;
+        /* ── Features ── */
+        .features-section {
+            padding: 2.5rem 0 3rem;
         }
 
-        .problem-header {
+        .features-intro {
             margin-bottom: 2rem;
         }
 
-        .problem-grid {
+        .features-intro p {
+            font-size: 0.97rem;
+            color: hsl(var(--muted-stone));
+            line-height: 1.65;
+            max-width: 42rem;
+        }
+
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
             gap: 1.25rem;
         }
 
-        .problem-card {
+        .feature-card {
             background: rgba(251, 248, 243, 0.96);
             border: 1px solid rgba(72, 96, 54, 0.18);
             border-radius: 1.25rem;
@@ -191,23 +155,23 @@
             overflow: hidden;
         }
 
-        .problem-card::before {
+        .feature-card::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 3px;
             background: linear-gradient(90deg, hsl(var(--dark-pistachio)), hsl(var(--industrial-orange)));
-            opacity: 0.65;
+            opacity: 0.6;
         }
 
-        .problem-card-icon {
-            width: 38px;
-            height: 38px;
+        .feature-icon {
+            width: 36px;
+            height: 36px;
             margin-bottom: 1rem;
             color: hsl(var(--industrial-orange));
         }
 
-        .problem-card h3 {
+        .feature-card h3 {
             font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", serif;
             font-size: 1.15rem;
             color: hsl(var(--foreground));
@@ -215,246 +179,15 @@
             line-height: 1.25;
         }
 
-        .problem-card p {
-            font-size: 0.96rem;
+        .feature-card p {
+            font-size: 0.95rem;
             color: hsl(var(--muted-stone));
             line-height: 1.68;
         }
 
-        /* ── Mockup Section ── */
-        .mockup-section {
-            padding: 3rem 0 3.5rem;
-        }
-
-        .mockup-header {
-            margin-bottom: 2rem;
-        }
-
-        .browser-frame {
-            background: rgba(251, 248, 243, 0.96);
-            border: 1px solid rgba(72, 96, 54, 0.18);
-            border-radius: 1.25rem;
-            box-shadow: 0 18px 48px rgba(47, 42, 36, 0.08);
-            overflow: hidden;
-        }
-
-        .browser-chrome {
-            background: hsl(40 20% 90%);
-            border-bottom: 1px solid rgba(217, 209, 199, 0.9);
-            padding: 0.6rem 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.65rem;
-        }
-
-        .browser-dots {
-            display: flex;
-            gap: 0.35rem;
-        }
-
-        .browser-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-
-        .browser-dot:nth-child(1) { background: #e07070; }
-        .browser-dot:nth-child(2) { background: #e8b563; }
-        .browser-dot:nth-child(3) { background: #78b880; }
-
-        .browser-url {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.72);
-            border: 1px solid hsl(var(--border));
-            border-radius: 0.35rem;
-            padding: 0.22rem 0.7rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: hsl(var(--muted-stone));
-        }
-
-        .mock-site-nav {
-            background: rgba(251, 248, 243, 0.98);
-            border-bottom: 1px solid hsl(var(--border));
-            padding: 0.7rem 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .mock-logo-text {
-            font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", serif;
-            font-size: 1rem;
-            color: hsl(var(--foreground));
-        }
-
-        .mock-nav-links {
-            display: flex;
-            gap: 1.1rem;
-            font-size: 0.78rem;
-            color: hsl(var(--muted-stone));
-        }
-
-        .mock-nav-cta {
-            color: hsl(var(--industrial-orange));
-            font-weight: 600;
-        }
-
-        .mock-hero-band {
-            background: linear-gradient(135deg, rgba(120, 148, 100, 0.09), rgba(236, 106, 55, 0.06));
-            padding: 1.75rem 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 2rem;
-        }
-
-        .mock-hero-text h2 {
-            font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", serif;
-            font-size: clamp(1rem, 2.4vw, 1.55rem);
-            color: hsl(var(--foreground));
-            line-height: 1.2;
-            margin-bottom: 0.45rem;
-        }
-
-        .mock-hero-text p {
-            font-size: 0.78rem;
-            color: hsl(var(--muted-stone));
-            line-height: 1.55;
-            max-width: 20rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .mock-pill {
-            display: inline-block;
-            background: hsl(var(--industrial-orange));
-            color: white;
-            font-size: 0.68rem;
-            font-weight: 500;
-            padding: 0.3rem 0.75rem;
-            border-radius: 0.35rem;
-        }
-
-        .mock-form-box {
-            flex-shrink: 0;
-            width: 36%;
-            min-width: 120px;
-            background: rgba(120, 148, 100, 0.1);
-            border: 1px solid rgba(72, 96, 54, 0.2);
-            border-radius: 0.75rem;
-            padding: 0.85rem;
-        }
-
-        .mock-form-label {
-            font-size: 0.68rem;
-            font-weight: 600;
-            color: hsl(var(--foreground));
-            margin-bottom: 0.55rem;
-        }
-
-        .mock-form-field {
-            height: 20px;
-            background: rgba(217, 209, 199, 0.55);
-            border-radius: 0.3rem;
-            margin-bottom: 0.35rem;
-        }
-
-        .mock-form-submit {
-            height: 24px;
-            background: hsl(var(--industrial-orange));
-            border-radius: 0.35rem;
-            margin-top: 0.4rem;
-            opacity: 0.85;
-        }
-
-        .mock-features-strip {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.75rem;
-            padding: 1rem 1.5rem 1.25rem;
-            background: hsl(var(--background));
-        }
-
-        .mock-feature-card {
-            background: rgba(251, 248, 243, 0.96);
-            border: 1px solid rgba(72, 96, 54, 0.16);
-            border-radius: 0.65rem;
-            padding: 0.75rem;
-        }
-
-        .mock-feature-bar {
-            height: 3px;
-            background: linear-gradient(90deg, hsl(var(--dark-pistachio)), hsl(var(--industrial-orange)));
-            border-radius: 2px;
-            margin-bottom: 0.55rem;
-            opacity: 0.65;
-        }
-
-        .mock-feature-title {
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: hsl(var(--foreground));
-            margin-bottom: 0.35rem;
-        }
-
-        .mock-line {
-            height: 5px;
-            background: hsl(var(--border));
-            border-radius: 3px;
-            margin-bottom: 0.22rem;
-        }
-
-        .mock-line.w60 { width: 60%; }
-        .mock-line.w40 { width: 40%; }
-
-        /* ── Trust Section ── */
-        .trust-section {
-            padding: 3rem 0 3.5rem;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-            gap: 1.75rem;
-            margin-top: 2rem;
-        }
-
-        .trust-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        .trust-icon {
-            flex-shrink: 0;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: rgba(60, 90, 42, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: hsl(var(--dark-pistachio));
-        }
-
-        .trust-text h3 {
-            font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", serif;
-            font-size: 1.05rem;
-            color: hsl(var(--foreground));
-            margin-bottom: 0.3rem;
-            line-height: 1.3;
-        }
-
-        .trust-text p {
-            font-size: 0.93rem;
-            color: hsl(var(--muted-stone));
-            line-height: 1.65;
-        }
-
-        /* ── Booking Section ── */
+        /* ── Booking ── */
         .booking-section {
-            padding: 3.5rem 0 4.5rem;
+            padding: 2.5rem 0 4.5rem;
             scroll-margin-top: 1.5rem;
         }
 
@@ -463,12 +196,12 @@
             border: 1px solid rgba(72, 96, 54, 0.18);
             border-radius: 1.75rem;
             box-shadow: 0 18px 48px rgba(47, 42, 36, 0.06);
-            padding: clamp(1.75rem, 4vw, 3rem);
+            padding: clamp(1.75rem, 4vw, 2.75rem);
         }
 
         .booking-title {
             font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", serif;
-            font-size: clamp(1.45rem, 3vw, 2.1rem);
+            font-size: clamp(1.35rem, 2.8vw, 1.9rem);
             color: hsl(var(--foreground));
             line-height: 1.25;
             margin-bottom: 0.6rem;
@@ -476,10 +209,10 @@
 
         .booking-sub {
             color: hsl(var(--muted-stone));
-            font-size: 1rem;
-            line-height: 1.65;
-            margin-bottom: 2rem;
-            max-width: 42rem;
+            font-size: 0.97rem;
+            line-height: 1.68;
+            margin-bottom: 1.75rem;
+            max-width: 40rem;
         }
 
         .cal-trigger-btn {
@@ -489,39 +222,38 @@
             background: hsl(var(--industrial-orange));
             color: #fff;
             font-family: 'Inter', sans-serif;
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 500;
-            padding: 1rem 2.1rem;
+            padding: 0.9rem 1.9rem;
             border-radius: 0.75rem;
             border: none;
             cursor: pointer;
             transition: background 0.18s, transform 0.14s, box-shadow 0.18s;
-            box-shadow: 0 4px 20px rgba(236, 106, 55, 0.25);
+            box-shadow: 0 4px 20px rgba(236, 106, 55, 0.22);
         }
 
         .cal-trigger-btn:hover, .cal-trigger-btn:focus-visible {
             background: hsl(18 83% 63%);
             transform: translateY(-1px);
-            box-shadow: 0 6px 24px rgba(236, 106, 55, 0.32);
+            box-shadow: 0 6px 24px rgba(236, 106, 55, 0.3);
             outline: none;
         }
 
-        #cal-container {
-            margin-top: 1.5rem;
-        }
+        #cal-container { margin-top: 1.5rem; }
 
-        .cal-privacy-note {
-            margin-top: 1rem;
-            font-size: 0.82rem;
+        .cal-note {
+            margin-top: 0.85rem;
+            font-size: 0.8rem;
             color: hsl(var(--muted-stone));
+            line-height: 1.5;
         }
 
-        .cal-privacy-note a {
+        .cal-note a {
             color: hsl(var(--industrial-orange));
             text-decoration: none;
         }
 
-        .cal-privacy-note a:hover { text-decoration: underline; }
+        .cal-note a:hover { text-decoration: underline; }
 
         /* ── Footer ── */
         .site-footer {
@@ -545,19 +277,12 @@
             gap: 1.25rem;
         }
 
-        .footer-links a {
-            text-decoration: none;
-            transition: color 0.15s;
-        }
-
-        .footer-links a:hover, .footer-links a:focus-visible { color: hsl(var(--foreground)); }
+        .footer-links a { text-decoration: none; transition: color 0.15s; }
+        .footer-links a:hover { color: hsl(var(--foreground)); }
 
         /* ── Responsive ── */
-        @media (max-width: 760px) {
+        @media (max-width: 680px) {
             .site-header { flex-direction: column; align-items: flex-start; }
-            .mock-hero-band { flex-direction: column; }
-            .mock-form-box { width: 100%; }
-            .mock-features-strip { grid-template-columns: 1fr; }
             .footer-inner { flex-direction: column; align-items: flex-start; }
         }
 
@@ -569,7 +294,7 @@
 <body>
 
 <header class="site-shell site-header">
-    <a href="#" class="header-brand" aria-label="RAIS Startseite">
+    <a href="#" class="header-brand" aria-label="RAIS">
         <img src="RAIS_LOGO_PICTOGRAM.png" alt="">
         <span class="brand-word">RAIS</span>
     </a>
@@ -587,183 +312,74 @@
             <div class="signal-label">Persönliche Einladung</div>
             <div class="signal-divider"></div>
             <h1 id="hero-greeting">Guten Tag.</h1>
-            <p class="hero-sub">
-                Hände voll Mörtel, Sonne am brutzeln — und das Telefon klingelt. Keine Zeit dran zu gehen. Auftrag weg.<br><br>
-                Wir haben <strong data-biz>Ihren Betrieb</strong> online angesehen und festgestellt: Wer Sie gerade nicht sofort erreichen kann, ruft den nächsten Betrieb an. Ich zeige Ihnen in 30 Minuten, wie das aufhört.
+            <p class="hero-body">
+                Wir haben uns <strong data-biz>Ihren Betrieb</strong> online angesehen. Für Betriebe wie Ihren bauen wir Websites, die Kundenanfragen rund um die Uhr auffangen — auch wenn Sie gerade nicht ans Telefon gehen können. Drei Dinge, die dabei enthalten wären:
             </p>
-            <a href="#termin" class="cta-btn">Kurzen Termin anfragen — kostenlos</a>
         </div>
     </section>
 
-    <!-- Problem -->
-    <section class="site-shell problem-section" aria-labelledby="problem-title">
-        <div class="problem-header">
-            <div class="signal-label">Das Problem</div>
-            <div class="signal-divider"></div>
-            <h2 class="section-title" id="problem-title">Das Telefon kann nicht alles auffangen</h2>
-            <p class="section-sub">Drei Situationen, in denen Ihre Website heute Kunden verliert — obwohl Sie gute Arbeit machen.</p>
-        </div>
-        <div class="problem-grid">
-            <article class="problem-card">
-                <svg class="problem-card-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect x="4" y="9" width="32" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
-                    <path d="M4 15l16 9 16-9" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                </svg>
-                <h3>Der Anruf, den Sie nicht gehört haben</h3>
-                <p>Mitten auf der Baustelle klingelt es. Sie kommen nicht ran. Kunden, die nicht zurückgerufen werden wollen, gehen einfach weiter — zur Konkurrenz.</p>
-            </article>
-            <article class="problem-card">
-                <svg class="problem-card-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect x="6" y="4" width="28" height="32" rx="3" stroke="currentColor" stroke-width="2"/>
-                    <path d="M12 14h16M12 20h11M12 26h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M28 22l-3 4 2 2 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <h3>Anfragen, die nirgendwo hinführen</h3>
-                <p>Kein Preisrechner auf der Website bedeutet: Interessenten fragen an, ohne zu wissen was es kostet. Jedes zweite Gespräch endet ohne Auftrag — und hat trotzdem Ihre Zeit gekostet.</p>
-            </article>
-            <article class="problem-card">
-                <svg class="problem-card-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect x="4" y="8" width="32" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
-                    <path d="M4 16h32" stroke="currentColor" stroke-width="2"/>
-                    <path d="M13 4v8M27 4v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M13 24h5M22 24h5M13 30h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="24.5" cy="30" r="1.5" fill="currentColor"/>
-                </svg>
-                <h3>Kunden buchen nachts — oder gar nicht</h3>
-                <p>Wer abends die Küche plant oder morgens früh an die Renovierung denkt, will sofort einen Termin machen. Wenn das nicht geht, ist er beim nächsten Betrieb — der es ermöglicht.</p>
-            </article>
-        </div>
-    </section>
+    <!-- Features -->
+    <section class="site-shell features-section" aria-labelledby="features-title">
+        <div class="features-grid">
 
-    <!-- Mockup -->
-    <section class="site-shell mockup-section" aria-labelledby="mockup-title">
-        <div class="mockup-header">
-            <div class="signal-label">Was möglich wäre</div>
-            <div class="signal-divider"></div>
-            <h2 class="section-title" id="mockup-title">So könnte <span data-biz>Ihr Betrieb</span> online aussehen</h2>
-            <p class="section-sub" style="margin-bottom:1.5rem">Ein Eindruck — kein Versprechen. Wie ein Kontaktformular, Kostenrechner und Terminbuchung für Ihren Betrieb aussehen könnten.</p>
-        </div>
-        <div class="browser-frame" role="img" aria-label="Vorschau: Professionelle Handwerker-Website mit Kontaktformular, Kalkulator und Terminbuchung">
-            <div class="browser-chrome">
-                <div class="browser-dots">
-                    <div class="browser-dot"></div>
-                    <div class="browser-dot"></div>
-                    <div class="browser-dot"></div>
-                </div>
-                <div class="browser-url" aria-hidden="true">ihre-neue-website.de</div>
-            </div>
-            <div>
-                <nav class="mock-site-nav" aria-hidden="true">
-                    <span class="mock-logo-text" data-biz>Ihr Betrieb</span>
-                    <div class="mock-nav-links">
-                        <span>Leistungen</span>
-                        <span>Referenzen</span>
-                        <span class="mock-nav-cta">Termin buchen</span>
-                    </div>
-                </nav>
-                <div class="mock-hero-band" aria-hidden="true">
-                    <div class="mock-hero-text">
-                        <h2>Fachbetrieb für Fliesen &amp; Böden</h2>
-                        <p>Verlässliche Handwerksarbeit, schnelle Rückmeldung, transparente Preise.</p>
-                        <span class="mock-pill">Jetzt Termin vereinbaren</span>
-                    </div>
-                    <div class="mock-form-box" aria-hidden="true">
-                        <div class="mock-form-label">Kostenloses Angebot</div>
-                        <div class="mock-form-field"></div>
-                        <div class="mock-form-field"></div>
-                        <div class="mock-form-submit"></div>
-                    </div>
-                </div>
-                <div class="mock-features-strip" aria-hidden="true">
-                    <div class="mock-feature-card">
-                        <div class="mock-feature-bar"></div>
-                        <div class="mock-feature-title">Kontaktformular</div>
-                        <div class="mock-line"></div>
-                        <div class="mock-line w60"></div>
-                        <div class="mock-line w40"></div>
-                    </div>
-                    <div class="mock-feature-card">
-                        <div class="mock-feature-bar"></div>
-                        <div class="mock-feature-title">Kostenkalkulator</div>
-                        <div class="mock-line"></div>
-                        <div class="mock-line w60"></div>
-                        <div class="mock-line w40"></div>
-                    </div>
-                    <div class="mock-feature-card">
-                        <div class="mock-feature-bar"></div>
-                        <div class="mock-feature-title">Online-Terminbuchung</div>
-                        <div class="mock-line"></div>
-                        <div class="mock-line w60"></div>
-                        <div class="mock-line w40"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p class="section-sub" style="margin-top:1.1rem;font-size:0.93rem">Fertig in zwei Wochen. Ab dann läuft die Website für Sie — auch wenn Sie auf der Baustelle sind.</p>
-    </section>
+            <article class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="3" y="3" width="30" height="30" rx="3" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M10 12h16M10 18h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <circle cx="26" cy="24" r="5" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M24.5 24h1.5l1-1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h3>Kostenkalkulator</h3>
+                <p>Kunden berechnen vorab eine grobe Preisvorstellung — bevor sie anfragen. Das spart Ihnen Gespräche, die ohnehin nirgendwo hinführen.</p>
+            </article>
 
-    <!-- Trust -->
-    <section class="site-shell trust-section" aria-labelledby="trust-title">
-        <div class="signal-label">Warum RAIS</div>
-        <div class="signal-divider"></div>
-        <h2 class="section-title" id="trust-title">Sie kümmern sich ums Handwerk. Ich kümmere mich um die Website.</h2>
-        <p class="section-sub">Kein langer Prozess. Keine Technik-Diskussionen. Nur ein funktionierendes Ergebnis.</p>
-        <div class="trust-grid">
-            <div class="trust-item">
-                <div class="trust-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="trust-text">
-                    <h3>In 2 Wochen live</h3>
-                    <p>Website steht, Formular nimmt Anfragen entgegen, Terminbuchung läuft — auch wenn Sie auf der Baustelle sind.</p>
-                </div>
-            </div>
-            <div class="trust-item">
-                <div class="trust-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="trust-text">
-                    <h3>Einmalpreis — Sie wissen vorher, was es kostet</h3>
-                    <p>Kein Abo-Modell, keine Stundensätze, keine Überraschungsrechnung am Ende.</p>
-                </div>
-            </div>
-            <div class="trust-item">
-                <div class="trust-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="trust-text">
-                    <h3>Direkt mit mir — Kevin Ritz</h3>
-                    <p>Kein Ticket-System, keine Warteschleife. Sie schreiben mir, ich antworte. So funktioniert das.</p>
-                </div>
-            </div>
+            <article class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="3" y="7" width="30" height="26" rx="2.5" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M3 14h30" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M12 3v6M24 3v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M10 21h5M21 21h5M10 27h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <circle cx="23.5" cy="27" r="1.5" fill="currentColor"/>
+                </svg>
+                <h3>Online-Terminbuchung</h3>
+                <p>Kunden buchen direkt einen Termin — egal ob morgens früh oder abends spät. Kein Anruf nötig, kein Kontakt verloren.</p>
+            </article>
+
+            <article class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="3" y="7" width="30" height="22" rx="3" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M3 13l15 9 15-9" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+                <h3>Kontaktformular</h3>
+                <p>Wer lieber schreibt als anruft, kann trotzdem Kontakt aufnehmen. Anfragen landen direkt bei Ihnen — nichts geht verloren.</p>
+            </article>
+
         </div>
     </section>
 
     <!-- Booking -->
     <section class="site-shell booking-section" id="termin" aria-labelledby="booking-title">
         <div class="booking-frame">
-            <div class="signal-label">Gespräch anfragen</div>
+            <div class="signal-label">Demo anfragen</div>
             <div class="signal-divider"></div>
-            <h2 class="booking-title" id="booking-title">Interesse? Buchen Sie einen kurzen Termin — ich bereite dann etwas für Sie vor</h2>
-            <p class="booking-sub">30 Minuten, kostenlos. Kein Verkaufsgespräch — nur ein kurzes Kennenlernen. Wenn es passt, zeige ich Ihnen danach, wie eine neue Website für <span data-biz>Ihren Betrieb</span> konkret aussehen könnte.</p>
+            <h2 class="booking-title" id="booking-title">Wenn Sie neugierig sind — buchen Sie einen kurzen Termin</h2>
+            <p class="booking-sub">
+                Kein Verkaufsgespräch. Ich zeige Ihnen in 30 Minuten, wie das für <span data-biz>Ihren Betrieb</span> konkret aussehen würde — und Sie entscheiden, ob das etwas für Sie ist.
+            </p>
             <div id="cal-trigger">
                 <button class="cal-trigger-btn" onclick="loadCalendly()" type="button">
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <rect x="1.5" y="3" width="14" height="12.5" rx="2" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M1.5 7h14" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M5.5 1v3.5M11.5 1v3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="1.5" y="2.5" width="13" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M1.5 6.5h13" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M5 1v3M11 1v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
-                    Termin anfragen
+                    Demo anfragen
                 </button>
             </div>
             <div id="cal-container" hidden></div>
-            <p class="cal-privacy-note">Mit dem Laden des Buchungsformulars werden Daten an Calendly (USA) übermittelt. Details in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+            <p class="cal-note">
+                Termine sind mindestens 48 Stunden im Voraus buchbar. Mit dem Laden des Buchungsformulars werden Daten an Calendly (USA) übermittelt — Details in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.
+            </p>
         </div>
     </section>
 
@@ -783,7 +399,7 @@
 (function () {
     var p    = new URLSearchParams(location.search);
     var name = (p.get('name') || '').trim();
-    var biz  = (p.get('business') || '').trim() || 'Ihrem Betrieb';
+    var biz  = (p.get('business') || '').trim() || 'Ihren Betrieb';
     var cal  = (p.get('cal')  || '').trim() || 'https://calendly.com/ritzaisolutions/30min';
 
     var greetingEl = document.getElementById('hero-greeting');
@@ -797,7 +413,7 @@
 
     window.__calUrl = cal;
 
-    if (name || biz !== 'Ihrem Betrieb') {
+    if (name || biz !== 'Ihren Betrieb') {
         document.title = 'Demo-Einladung für ' + biz + ' — RAIS';
     }
 })();
@@ -808,13 +424,11 @@ function loadCalendly() {
     var url = window.__calUrl || 'https://calendly.com/ritzaisolutions/30min';
 
     container.innerHTML =
-        '<div class="calendly-inline-widget"' +
-        ' data-url="' + encodeURIComponent(url).replace(/%2F/g, '/').replace(/%3A/g, ':') + '"' +
-        ' style="min-width:320px;height:700px;"></div>';
+        '<div class="calendly-inline-widget" data-url="' + url + '" style="min-width:320px;height:700px;"></div>';
 
-    var s    = document.createElement('script');
-    s.src    = 'https://assets.calendly.com/assets/external/widget.js';
-    s.async  = true;
+    var s   = document.createElement('script');
+    s.src   = 'https://assets.calendly.com/assets/external/widget.js';
+    s.async = true;
     document.head.appendChild(s);
 
     container.hidden = false;
