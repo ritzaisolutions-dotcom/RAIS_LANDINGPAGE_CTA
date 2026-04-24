@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datenschutzerklärung | RAIS</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="fonts.css" />
+    <script src="https://cloud.ccm19.de/app.js?apiKey=44ff2519f360f540f17d013a2a4094e2019143535dcc7c76&domain=69e29700b6f98fcee101f2d2" referrerpolicy="origin"></script>
+    <style>
+        :root {
+            --background: 40 29% 94%;
+            --foreground: 24 13% 16%;
+            --border: 36 21% 83%;
+            --industrial-orange: 18 83% 57%;
+            --dark-pistachio: 95 28% 26%;
+            --muted-stone: 31 8% 42%;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            background-image:
+                radial-gradient(circle at top right, rgba(143, 159, 114, 0.22), transparent 28%),
+                radial-gradient(circle at 16% 18%, rgba(72, 96, 54, 0.14), transparent 24%),
+                linear-gradient(180deg, rgba(251, 248, 243, 0.98), rgba(244, 241, 234, 1));
+        }
+
+        a { color: inherit; }
+
+        .site-shell {
+            width: min(64rem, calc(100vw - 2rem));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center;
+            padding: 1.5rem 0 1rem;
+        }
+
+        .brand {
+            font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", serif;
+            font-size: 1.9rem;
+            color: hsl(var(--foreground));
+            text-decoration: none;
+        }
+
+        .topnav {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            color: hsl(var(--muted-stone));
+        }
+
+        .topnav a { text-decoration: none; }
+
+        .topnav a:hover, .topnav a:focus-visible { color: hsl(var(--foreground)); }
+
+        .page-frame {
+            background: rgba(251, 248, 243, 0.94);
+            border: 1px solid rgba(72, 96, 54, 0.18);
+            border-radius: 1.75rem;
+            box-shadow: 0 18px 48px rgba(47, 42, 36, 0.06);
+            padding: clamp(1.25rem, 3vw, 2.5rem);
+            margin: 1rem auto 2rem;
+        }
+
+        .signal-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: hsl(var(--dark-pistachio));
+            margin-bottom: 0.75rem;
+        }
+
+        .signal-divider {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(72, 96, 54, 0.82), rgba(236, 106, 55, 0.55), rgba(217, 209, 199, 0.18));
+            margin: 0 0 1.5rem;
+        }
+
+        .legal-copy {
+            max-width: 50rem;
+            margin: 0 auto;
+            color: hsl(var(--muted-stone));
+            line-height: 1.72;
+            font-size: 1rem;
+            overflow-wrap: anywhere;
+        }
+
+        .legal-copy h1,
+        .legal-copy h2,
+        .legal-copy h3,
+        .legal-copy h4 {
+            font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", serif;
+            color: hsl(var(--foreground));
+            line-height: 1.15;
+            margin: 0 0 1rem;
+        }
+
+        .legal-copy h1 { font-size: clamp(2rem, 4vw, 3.4rem); margin-bottom: 1.15rem; }
+        .legal-copy h2 { font-size: clamp(1.45rem, 2.8vw, 2rem); margin-top: 2.1rem; }
+        .legal-copy h3 { font-size: 1.15rem; margin-top: 1.55rem; }
+
+        .legal-copy p,
+        .legal-copy ul,
+        .legal-copy ol,
+        .legal-copy table,
+        .legal-copy blockquote { margin: 0 0 1rem; }
+
+        .legal-copy ul, .legal-copy ol { padding-left: 1.25rem; }
+
+        .legal-copy li + li { margin-top: 0.45rem; }
+
+        .legal-copy strong, .legal-copy b { color: hsl(var(--foreground)); }
+
+        .legal-copy a {
+            color: hsl(var(--industrial-orange));
+            text-decoration: none;
+        }
+
+        .legal-copy a:hover, .legal-copy a:focus-visible {
+            color: hsl(var(--foreground));
+            text-decoration: underline;
+        }
+
+        .legal-copy table {
+            width: 100%;
+            border-collapse: collapse;
+            display: block;
+            overflow-x: auto;
+            border: 1px solid hsl(var(--border));
+            border-radius: 1rem;
+            background: rgba(251, 248, 243, 0.85);
+        }
+
+        .legal-copy th, .legal-copy td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid hsl(var(--border));
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .legal-copy th {
+            color: hsl(var(--foreground));
+            background: rgba(120, 148, 100, 0.12);
+        }
+
+        .legal-copy tr:last-child td { border-bottom: 0; }
+
+        .site-footer {
+            padding: 0 0 2.5rem;
+            color: hsl(var(--muted-stone));
+            font-size: 0.92rem;
+        }
+
+        .site-footer .footer-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.75rem;
+        }
+
+        .site-footer .footer-links a { text-decoration: none; }
+
+        .site-footer .footer-links a:hover,
+        .site-footer .footer-links a:focus-visible { color: hsl(var(--foreground)); }
+
+        @media (max-width: 720px) {
+            .topbar { align-items: flex-start; flex-direction: column; }
+            .page-frame { border-radius: 1.5rem; padding: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+<header class="site-shell topbar">
+    <a href="index.html" class="brand">RAIS</a>
+    <nav class="topnav" aria-label="Rechtliche Navigation">
+        <a href="index.html">Zurück</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+</header>
+<main class="site-shell">
+    <section class="page-frame">
+        <div class="signal-label">RAIS / Ritz AI Solutions — Datenschutz</div>
+        <div class="signal-divider"></div>
+        <article class="legal-copy">
+            <h1>Datenschutz&shy;erkl&auml;rung</h1>
+<h2>1. Datenschutz auf einen Blick</h2>
+<h3>Allgemeine Hinweise</h3> <p>Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.</p>
+<h3>Datenerfassung auf dieser Website</h3> <h4>Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?</h4> <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten k&ouml;nnen Sie dem Abschnitt &bdquo;Hinweis zur Verantwortlichen Stelle&ldquo; in dieser Datenschutzerkl&auml;rung entnehmen.</p> <h4>Wie erfassen wir Ihre Daten?</h4> <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.&nbsp;B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p> <p>Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.&nbsp;B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.</p> <h4>Wof&uuml;r nutzen wir Ihre Daten?</h4> <p>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gew&auml;hrleisten. Andere Daten k&ouml;nnen zur Analyse Ihres Nutzerverhaltens verwendet werden. Sofern &uuml;ber die Website Vertr&auml;ge geschlossen oder angebahnt werden k&ouml;nnen, werden die &uuml;bermittelten Daten auch f&uuml;r Vertragsangebote, Bestellungen oder sonstige Auftragsanfragen verarbeitet.</p> <h4>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h4> <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft &uuml;ber Herkunft, Empf&auml;nger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben au&szlig;erdem ein Recht, die Berichtigung oder L&ouml;schung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, k&ouml;nnen Sie diese Einwilligung jederzeit f&uuml;r die Zukunft widerrufen. Au&szlig;erdem haben Sie das Recht, unter bestimmten Umst&auml;nden die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde zu.</p> <p>Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie sich jederzeit an uns wenden.</p>
+<h3>Analyse-Tools und Tools von Dritt&shy;anbietern</h3> <p>Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit sogenannten Analyseprogrammen.</p> <p>Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden Datenschutzerkl&auml;rung.</p>
+<h2>2. Hosting</h2>
+<p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
+<h3>Externes Hosting</h3> <p>Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei kann es sich v.&nbsp;a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die &uuml;ber eine Website generiert werden, handeln.</p> <p>Das externe Hosting erfolgt zum Zwecke der Vertragserf&uuml;llung gegen&uuml;ber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschlie&szlig;lich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endger&auml;t des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.</p> <p>Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies zur Erf&uuml;llung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.</p> <p>Wir setzen folgende(n) Hoster ein:</p>
+<p>Vercel Inc., 340 Pine Street, Suite 1600, San Francisco, California 94104, USA</p>
+<h2>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
+<h3>Datenschutz</h3> <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerkl&auml;rung.</p>
+<h3>Hinweis zur verantwortlichen Stelle</h3> <p>Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:</p> <p>Kevin Ritz (handelnd unter Ritz AI Solutions / RAIS)<br />
+Von-Cohausen-Stra&szlig;e 9<br />
+56076 Koblenz</p>
+<p>Telefon: +49 151 29755134<br />
+E-Mail: kevin@ritz-ai.solutions</p>
+<h3>Speicherdauer</h3> <p>Soweit innerhalb dieser Datenschutzerkl&auml;rung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck f&uuml;r die Datenverarbeitung entf&auml;llt. Wenn Sie ein berechtigtes L&ouml;schersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gel&ouml;scht, sofern wir keine anderen rechtlich zul&auml;ssigen Gr&uuml;nde f&uuml;r die Speicherung Ihrer personenbezogenen Daten haben (z.&nbsp;B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die L&ouml;schung nach Fortfall dieser Gr&uuml;nde.</p>
+<h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3> <p>Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer ausdr&uuml;cklichen Einwilligung m&ouml;glich. Sie k&ouml;nnen eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.</p>
+<h2>4. Datenerfassung auf dieser Website</h2>
+<h3>Cookies</h3> <p>Unsere Internetseiten verwenden so genannte &bdquo;Cookies&ldquo;. Cookies sind kleine Datenpakete und richten auf Ihrem Endger&auml;t keinen Schaden an. Sie werden entweder vor&uuml;bergehend f&uuml;r die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endger&auml;t gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch gel&ouml;scht. Permanente Cookies bleiben auf Ihrem Endger&auml;t gespeichert, bis Sie diese selbst l&ouml;schen oder eine automatische L&ouml;schung durch Ihren Webbrowser erfolgt.</p> <p>Sie k&ouml;nnen Ihren Browser so einstellen, dass Sie &uuml;ber das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies f&uuml;r bestimmte F&auml;lle oder generell ausschlie&szlig;en sowie das automatische L&ouml;schen der Cookies beim Schlie&szlig;en des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalit&auml;t dieser Website eingeschr&auml;nkt sein.</p>
+<h3>Calendly</h3> <p>Auf unserer Website haben Sie die M&ouml;glichkeit, Termine mit uns zu vereinbaren. F&uuml;r die Terminbuchung nutzen wir das Tool &bdquo;Calendly&ldquo;. Anbieter ist die Calendly LLC, 271 17th St NW, 10th Floor, Atlanta, Georgia 30363, USA (nachfolgend &bdquo;Calendly&ldquo;).</p> <p>Die externe Calendly-Einbindung wird auf dieser Website nicht bereits beim blo&szlig;en Seitenaufruf geladen. Das Widget wird erst nach einer ausdr&uuml;cklichen Nutzeraktion (Klick auf den Button &bdquo;Termin ausw&auml;hlen&ldquo;) nachgeladen. Ohne diesen Klick werden keine Daten an Calendly &uuml;bertragen.</p> <p>Zum Zweck der Terminbuchung geben Sie die abgefragten Daten und den Wunschtermin in die daf&uuml;r vorgesehene Maske ein. Die eingegebenen Daten werden f&uuml;r die Planung, Durchf&uuml;hrung und ggf. f&uuml;r die Nachbereitung des Termins verwendet. Die Termindaten werden f&uuml;r uns auf den Servern von Calendly gespeichert, dessen Datenschutzerkl&auml;rung Sie hier einsehen k&ouml;nnen: <a href="https://calendly.com/privacy" target="_blank" rel="noopener noreferrer">https://calendly.com/privacy</a>.</p> <p>Rechtsgrundlage f&uuml;r die Datenverarbeitung ist Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an einer m&ouml;glichst unkomplizierten Terminvereinbarung mit Interessenten und Kunden. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschlie&szlig;lich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1 TDDDG; die Einwilligung ist jederzeit widerrufbar.</p> <p>Die Daten&uuml;bertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gest&uuml;tzt. Details finden Sie hier: <a href="https://calendly.com/pages/dpa" target="_blank" rel="noopener noreferrer">https://calendly.com/pages/dpa</a>.</p>
+<p>Das Unternehmen verf&uuml;gt &uuml;ber eine Zertifizierung nach dem &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: <a href="https://www.dataprivacyframework.gov/participant/6050" target="_blank" rel="noopener noreferrer">https://www.dataprivacyframework.gov/participant/6050</a>.</p>
+<h3>Anfrage per E-Mail oder Telefon</h3> <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p> <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).</p>
+<h2>5. Plugins und Tools</h2>
+<h3>Google Fonts (lokales Hosting)</h3> <p>Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet dabei nicht statt.</p>
+<h3>Consent-Tool CCM19</h3>
+<p>Wir nutzen auf dieser Website das Consent-Management-Tool CCM19, um Einwilligungen f&uuml;r einwilligungsbed&uuml;rftige Dienste zu verwalten und Widerrufe technisch abzubilden. Anbieter ist die Papoo Software &amp; Media GmbH, Auguststr. 4, 53229 Bonn. Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO und Art. 6 Abs. 1 lit. f DSGVO.</p>
+        </article>
+    </section>
+</main>
+<footer class="site-shell site-footer">
+    <div>Klare Rechtstexte, am echten Stack ausgerichtet und lesbar gehalten.</div>
+    <div class="footer-links">
+        <a href="index.html">Zurück</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+    </div>
+</footer>
+</body>
+</html>
