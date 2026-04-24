@@ -123,71 +123,35 @@
             font-weight: 600;
         }
 
-        /* ── Features ── */
-        .features-section {
-            padding: 2.5rem 0 3rem;
+        /* ── Im Gespräch section ── */
+        .callout-section {
+            padding: 0 0 2.75rem;
         }
 
-        .features-intro {
-            margin-bottom: 2rem;
-        }
-
-        .features-intro p {
-            font-size: 0.97rem;
-            color: hsl(var(--muted-stone));
-            line-height: 1.65;
+        .callout-inner {
             max-width: 42rem;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-            gap: 1.25rem;
-        }
-
-        .feature-card {
-            background: rgba(251, 248, 243, 0.96);
-            border: 1px solid rgba(72, 96, 54, 0.18);
-            border-radius: 1.25rem;
-            padding: 1.5rem 1.5rem 1.75rem;
-            box-shadow: 0 4px 18px rgba(47, 42, 36, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, hsl(var(--dark-pistachio)), hsl(var(--industrial-orange)));
-            opacity: 0.6;
-        }
-
-        .feature-icon {
-            width: 36px;
-            height: 36px;
-            margin-bottom: 1rem;
-            color: hsl(var(--industrial-orange));
-        }
-
-        .feature-card h3 {
-            font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", serif;
-            font-size: 1.15rem;
-            color: hsl(var(--foreground));
-            margin-bottom: 0.55rem;
-            line-height: 1.25;
-        }
-
-        .feature-card p {
-            font-size: 0.95rem;
+        .callout-body {
+            font-size: 1rem;
             color: hsl(var(--muted-stone));
-            line-height: 1.68;
+            line-height: 1.72;
         }
+
+        .demo-link {
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: hsl(var(--industrial-orange));
+            text-decoration: none;
+            transition: text-decoration 0.1s;
+        }
+
+        .demo-link:hover { text-decoration: underline; }
 
         /* ── Booking ── */
         .booking-section {
-            padding: 2.5rem 0 4.5rem;
+            padding: 0 0 3rem;
             scroll-margin-top: 1.5rem;
         }
 
@@ -204,7 +168,7 @@
             font-size: clamp(1.35rem, 2.8vw, 1.9rem);
             color: hsl(var(--foreground));
             line-height: 1.25;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem;
         }
 
         .booking-sub {
@@ -212,7 +176,7 @@
             font-size: 0.97rem;
             line-height: 1.68;
             margin-bottom: 1.75rem;
-            max-width: 40rem;
+            max-width: 36rem;
         }
 
         .cal-trigger-btn {
@@ -245,7 +209,7 @@
             margin-top: 0.85rem;
             font-size: 0.8rem;
             color: hsl(var(--muted-stone));
-            line-height: 1.5;
+            line-height: 1.55;
         }
 
         .cal-note a {
@@ -254,6 +218,15 @@
         }
 
         .cal-note a:hover { text-decoration: underline; }
+
+        /* ── Trust line ── */
+        .trust-line {
+            text-align: center;
+            font-size: 0.85rem;
+            color: hsl(var(--muted-stone));
+            padding: 1.5rem 0 2rem;
+            border-top: 1px solid hsl(var(--border));
+        }
 
         /* ── Footer ── */
         .site-footer {
@@ -280,6 +253,45 @@
         .footer-links a { text-decoration: none; transition: color 0.15s; }
         .footer-links a:hover { color: hsl(var(--foreground)); }
 
+        /* ── Floating CTA ── */
+        .floating-cta {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(0.5rem);
+            z-index: 50;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: hsl(var(--industrial-orange));
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 0.85rem 1.6rem;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(236, 106, 55, 0.35);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease, background 0.18s, box-shadow 0.18s;
+            white-space: nowrap;
+        }
+
+        .floating-cta.floating-cta--visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .floating-cta:hover, .floating-cta:focus-visible {
+            background: hsl(18 83% 63%);
+            transform: translateX(-50%) translateY(-1px);
+            box-shadow: 0 10px 28px rgba(236, 106, 55, 0.42);
+            outline: none;
+        }
+
         /* ── Responsive ── */
         @media (max-width: 680px) {
             .site-header { flex-direction: column; align-items: flex-start; }
@@ -288,6 +300,35 @@
 
         @media (max-width: 480px) {
             .hero h1 { font-size: 1.95rem; }
+
+            .floating-cta {
+                left: 1rem;
+                right: 1rem;
+                bottom: 1rem;
+                transform: translateY(0.5rem);
+                border-radius: 0.75rem;
+                padding: 0.75rem 1.4rem;
+                justify-content: center;
+            }
+
+            .floating-cta.floating-cta--visible {
+                transform: translateY(0);
+            }
+
+            .floating-cta:hover, .floating-cta:focus-visible {
+                transform: translateY(-1px);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .floating-cta {
+                transition: opacity 0.25s ease;
+                transform: translateX(-50%) !important;
+            }
+
+            @media (max-width: 480px) {
+                .floating-cta { transform: none !important; }
+            }
         }
     </style>
 </head>
@@ -307,53 +348,28 @@
 <main>
 
     <!-- Hero -->
-    <section class="site-shell hero" aria-label="Persönliche Einladung">
+    <section class="site-shell hero" id="hero" aria-label="Persönliche Einladung">
         <div class="hero-inner">
             <div class="signal-label">Persönliche Einladung</div>
             <div class="signal-divider"></div>
             <h1 id="hero-greeting">Guten Tag.</h1>
             <p class="hero-body">
-                Wir haben uns <strong data-biz>Ihren Betrieb</strong> online angesehen. Auffällig: Anfragen laufen aktuell ausschließlich über Telefon. Wer Sie auf der Baustelle nicht erreicht, hat keinen anderen Weg eine Anfrage zu hinterlassen. Genau hier setzen wir an — mit drei Bausteinen:
+                Wir haben uns <strong data-biz>Ihren Betrieb</strong> online angesehen. Anfragen laufen aktuell ausschließlich über Telefon — wer Sie auf der Baustelle nicht erreicht, hat keinen anderen Weg, eine Anfrage zu hinterlassen.
             </p>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="site-shell features-section" aria-labelledby="features-title">
-        <div class="features-grid">
-
-            <article class="feature-card">
-                <svg class="feature-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect x="3" y="3" width="30" height="30" rx="3" stroke="currentColor" stroke-width="1.8"/>
-                    <path d="M10 12h16M10 18h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                    <circle cx="26" cy="24" r="5" stroke="currentColor" stroke-width="1.8"/>
-                    <path d="M24.5 24h1.5l1-1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <h3>Kostenkalkulator</h3>
-                <p>Kunden berechnen vorab eine grobe Preisvorstellung — bevor sie anfragen. Das spart Ihnen Gespräche, die ohnehin nirgendwo hinführen.</p>
-            </article>
-
-            <article class="feature-card">
-                <svg class="feature-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect x="3" y="7" width="30" height="26" rx="2.5" stroke="currentColor" stroke-width="1.8"/>
-                    <path d="M3 14h30" stroke="currentColor" stroke-width="1.8"/>
-                    <path d="M12 3v6M24 3v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                    <path d="M10 21h5M21 21h5M10 27h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                    <circle cx="23.5" cy="27" r="1.5" fill="currentColor"/>
-                </svg>
-                <h3>Online-Terminbuchung</h3>
-                <p>Kunden buchen direkt einen Termin — egal ob morgens früh oder abends spät. Kein Anruf nötig, kein Kontakt verloren.</p>
-            </article>
-
-            <article class="feature-card">
-                <svg class="feature-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect x="3" y="7" width="30" height="22" rx="3" stroke="currentColor" stroke-width="1.8"/>
-                    <path d="M3 13l15 9 15-9" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-                </svg>
-                <h3>Kontaktformular</h3>
-                <p>Wer lieber schreibt als anruft, kann trotzdem Kontakt aufnehmen. Anfragen landen direkt bei Ihnen — nichts geht verloren.</p>
-            </article>
-
+    <!-- Im Gespräch -->
+    <section class="site-shell callout-section" aria-labelledby="callout-title">
+        <div class="callout-inner">
+            <div class="signal-label">Im Gespräch</div>
+            <div class="signal-divider"></div>
+            <p class="callout-body">
+                15 Minuten, keine Folien, kein Verkaufsgespräch. Wir zeigen Ihnen anhand eines fertigen Beispiels, wie Kostenrechner und Online-Terminbuchung in der Praxis funktionieren. Wenn es passt, bauen wir bis zum Termin eine Vorschau speziell für <span data-biz>Ihren Betrieb</span>.
+            </p>
+            <a class="demo-link" href="https://project-frjzx.vercel.app/" target="_blank" rel="noopener">
+                Ein bestehendes Beispiel ansehen &rarr;
+            </a>
         </div>
     </section>
 
@@ -362,10 +378,8 @@
         <div class="booking-frame">
             <div class="signal-label">Demo anfragen</div>
             <div class="signal-divider"></div>
-            <h2 class="booking-title" id="booking-title">Wenn Sie neugierig sind — wählen Sie einen Termin</h2>
-            <p class="booking-sub">
-                Keine Präsentation, kein Verkaufsgespräch. Ich zeige Ihnen in 15 Minuten, wie das für <span data-biz>Ihren Betrieb</span> konkret aussehen würde — und Sie entscheiden, ob das etwas für Sie ist.
-            </p>
+            <h2 class="booking-title" id="booking-title">15-Minuten-Termin auswählen</h2>
+            <p class="booking-sub">Direkt im Kalender wählbar — kein Anruf nötig.</p>
             <div id="cal-trigger">
                 <button class="cal-trigger-btn" onclick="loadCalendly()" type="button">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -385,6 +399,9 @@
 
 </main>
 
+<!-- Trust line -->
+<div class="site-shell trust-line" aria-hidden="true">Kevin Ritz &middot; RAIS &middot; Koblenz</div>
+
 <footer class="site-shell site-footer">
     <div class="footer-inner">
         <span>© 2026 RAIS / Ritz AI Solutions</span>
@@ -394,6 +411,21 @@
         </nav>
     </div>
 </footer>
+
+<!-- Floating CTA -->
+<button
+    class="floating-cta"
+    id="floating-cta"
+    onclick="document.getElementById('termin').scrollIntoView({behavior:'smooth'})"
+    aria-label="Zum Buchungsformular springen"
+>
+    <svg width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1.5" y="2.5" width="13" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M1.5 6.5h13" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M5 1v3M11 1v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    15 Minuten buchen
+</button>
 
 <script>
 (function () {
@@ -434,6 +466,35 @@ function loadCalendly() {
     container.hidden = false;
     trigger.hidden   = true;
 }
+
+/* ── Floating CTA visibility ── */
+(function () {
+    var btn     = document.getElementById('floating-cta');
+    var booking = document.getElementById('termin');
+    var hero    = document.getElementById('hero');
+    if (!btn || !booking || !hero) return;
+
+    var heroVisible   = true;
+    var bookingVisible = false;
+
+    function update() {
+        var show = !heroVisible && !bookingVisible;
+        btn.classList.toggle('floating-cta--visible', show);
+    }
+
+    var heroObs = new IntersectionObserver(function (entries) {
+        heroVisible = entries[0].isIntersecting;
+        update();
+    }, { threshold: 0 });
+
+    var bookingObs = new IntersectionObserver(function (entries) {
+        bookingVisible = entries[0].intersectionRatio >= 0.3;
+        update();
+    }, { threshold: 0.3 });
+
+    heroObs.observe(hero);
+    bookingObs.observe(booking);
+})();
 </script>
 
 </body>
