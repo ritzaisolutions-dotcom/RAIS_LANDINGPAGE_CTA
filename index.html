@@ -155,6 +155,17 @@
             scroll-margin-top: 1.5rem;
         }
 
+        .proof-section {
+            padding: 0 0 2.5rem;
+        }
+
+        .proof-copy {
+            max-width: 42rem;
+            color: hsl(var(--muted-stone));
+            font-size: 0.95rem;
+            line-height: 1.68;
+        }
+
         .booking-frame {
             background: rgba(251, 248, 243, 0.96);
             border: 1px solid rgba(72, 96, 54, 0.18);
@@ -226,6 +237,23 @@
             color: hsl(var(--muted-stone));
             padding: 1.5rem 0 2rem;
             border-top: 1px solid hsl(var(--border));
+        }
+
+        .trust-line strong {
+            display: block;
+            color: hsl(var(--foreground));
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        .trust-line a {
+            text-decoration: none;
+        }
+
+        .trust-line a:hover,
+        .trust-line a:focus-visible {
+            color: hsl(var(--foreground));
+            text-decoration: underline;
         }
 
         /* ── Footer ── */
@@ -362,14 +390,11 @@
     <!-- Im Gespräch -->
     <section class="site-shell callout-section" aria-labelledby="callout-title">
         <div class="callout-inner">
-            <div class="signal-label">Im Gespräch</div>
+            <div class="signal-label" id="callout-title">Im Gespräch</div>
             <div class="signal-divider"></div>
             <p class="callout-body">
                 15 Minuten, keine Folien, kein Verkaufsgespräch. Wir zeigen Ihnen anhand eines fertigen Beispiels, wie Kostenrechner und Online-Terminbuchung in der Praxis funktionieren. Wenn es passt, bauen wir bis zum Termin eine Vorschau speziell für <span data-biz>Ihren Betrieb</span>.
             </p>
-            <a class="demo-link" id="demo-link" href="https://project-frjzx.vercel.app/" target="_blank" rel="noopener">
-                Ein bestehendes Beispiel ansehen &rarr;
-            </a>
         </div>
     </section>
 
@@ -397,10 +422,24 @@
         </div>
     </section>
 
+    <section class="site-shell proof-section" aria-label="Bestehendes Beispiel">
+        <div class="proof-copy">
+            <p>Sie wollen vor dem Termin einen ersten Eindruck?</p>
+            <a class="demo-link" id="demo-link" href="https://project-frjzx.vercel.app/" target="_blank" rel="noopener">
+                Hier ein bestehendes Beispiel ansehen &rarr;
+            </a>
+        </div>
+    </section>
+
 </main>
 
 <!-- Trust line -->
-<div class="site-shell trust-line" aria-hidden="true">Kevin Ritz &middot; RAIS &middot; Koblenz</div>
+<div class="site-shell trust-line">
+    <strong>Vorbereitet von Kevin Ritz &middot; Ritz AI Solutions, Koblenz</strong>
+    <a href="mailto:kevin@ritz-ai.solutions">kevin@ritz-ai.solutions</a>
+    &middot;
+    <a href="tel:+4915129755134">+49 151 2975 5134</a>
+</div>
 
 <footer class="site-shell site-footer">
     <div class="footer-inner">
@@ -470,6 +509,7 @@ function loadCalendly() {
     container.hidden = false;
     trigger.hidden   = true;
 }
+</script>
 
 <script>
 /* ── Floating CTA visibility ── */
