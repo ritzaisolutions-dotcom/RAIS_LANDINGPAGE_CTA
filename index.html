@@ -367,7 +367,7 @@
             <p class="callout-body">
                 15 Minuten, keine Folien, kein Verkaufsgespräch. Wir zeigen Ihnen anhand eines fertigen Beispiels, wie Kostenrechner und Online-Terminbuchung in der Praxis funktionieren. Wenn es passt, bauen wir bis zum Termin eine Vorschau speziell für <span data-biz>Ihren Betrieb</span>.
             </p>
-            <a class="demo-link" href="https://project-frjzx.vercel.app/" target="_blank" rel="noopener">
+            <a class="demo-link" id="demo-link" href="https://project-frjzx.vercel.app/" target="_blank" rel="noopener">
                 Ein bestehendes Beispiel ansehen &rarr;
             </a>
         </div>
@@ -433,6 +433,7 @@
     var name = (p.get('name') || '').trim();
     var biz  = (p.get('business') || '').trim() || 'Ihren Betrieb';
     var cal  = (p.get('cal')  || '').trim() || 'https://calendly.com/ritzaisolutions/30min';
+    var demo = (p.get('demo') || '').trim() || 'https://project-frjzx.vercel.app/';
 
     var greetingEl = document.getElementById('hero-greeting');
     if (greetingEl) {
@@ -442,6 +443,9 @@
     document.querySelectorAll('[data-biz]').forEach(function (el) {
         el.textContent = biz;
     });
+
+    var demoLink = document.getElementById('demo-link');
+    if (demoLink) demoLink.href = demo;
 
     window.__calUrl = cal;
 
@@ -488,9 +492,9 @@ function loadCalendly() {
     }, { threshold: 0 });
 
     var bookingObs = new IntersectionObserver(function (entries) {
-        bookingVisible = entries[0].intersectionRatio >= 0.3;
+        bookingVisible = entries[0].intersectionRatio >= 0.7;
         update();
-    }, { threshold: 0.3 });
+    }, { threshold: 0.7 });
 
     heroObs.observe(hero);
     bookingObs.observe(booking);
