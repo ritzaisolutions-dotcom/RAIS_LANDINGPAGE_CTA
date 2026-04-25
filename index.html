@@ -471,35 +471,30 @@ function loadCalendly() {
     trigger.hidden   = true;
 }
 
+<script>
 /* ── Floating CTA visibility ── */
 (function () {
     var btn     = document.getElementById('floating-cta');
     var booking = document.getElementById('termin');
-    var hero    = document.getElementById('hero');
-    if (!btn || !booking || !hero) return;
+    if (!btn || !booking) return;
 
-    var heroVisible   = true;
     var bookingVisible = false;
 
     function update() {
-        var show = !heroVisible && !bookingVisible;
-        btn.classList.toggle('floating-cta--visible', show);
+        btn.classList.toggle('floating-cta--visible', !bookingVisible);
     }
 
-    var heroObs = new IntersectionObserver(function (entries) {
-        heroVisible = entries[0].isIntersecting;
-        update();
-    }, { threshold: 0 });
+    // Zeige Button sofort beim Laden
+    btn.classList.add('floating-cta--visible');
 
+    // Verstecke nur wenn Booking-Section sichtbar ist
     var bookingObs = new IntersectionObserver(function (entries) {
-        bookingVisible = entries[0].intersectionRatio >= 0.7;
+        bookingVisible = entries[0].intersectionRatio >= 0.3;
         update();
-    }, { threshold: 0.7 });
+    }, { threshold: 0.3 });
 
-    heroObs.observe(hero);
     bookingObs.observe(booking);
 })();
 </script>
-
 </body>
 </html>
